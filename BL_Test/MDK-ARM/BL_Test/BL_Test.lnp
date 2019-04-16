@@ -1,0 +1,24 @@
+--cpu Cortex-M0
+"bl_test\startup_stm32f030x8.o"
+"bl_test\main.o"
+"bl_test\stm32f0xx_it.o"
+"bl_test\stm32f0xx_hal_msp.o"
+"bl_test\stm32f0xx_hal_tim.o"
+"bl_test\stm32f0xx_hal_tim_ex.o"
+"bl_test\stm32f0xx_hal_rcc.o"
+"bl_test\stm32f0xx_hal_rcc_ex.o"
+"bl_test\stm32f0xx_hal.o"
+"bl_test\stm32f0xx_hal_i2c.o"
+"bl_test\stm32f0xx_hal_i2c_ex.o"
+"bl_test\stm32f0xx_hal_gpio.o"
+"bl_test\stm32f0xx_hal_dma.o"
+"bl_test\stm32f0xx_hal_cortex.o"
+"bl_test\stm32f0xx_hal_pwr.o"
+"bl_test\stm32f0xx_hal_pwr_ex.o"
+"bl_test\stm32f0xx_hal_flash.o"
+"bl_test\stm32f0xx_hal_flash_ex.o"
+"bl_test\system_stm32f0xx.o"
+--library_type=microlib --strict --scatter "BL_Test\BL_Test.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "BL_Test.map" -o BL_Test\BL_Test.axf
